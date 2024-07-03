@@ -29,7 +29,7 @@ fastify.get('/track/:githubUsername', async (request, reply) => {
   const { githubUsername } = request.params
   const referer = request.headers.referer || ''
 
-  
+
   // if (!referer.startsWith(`https://github.com/${githubUsername}`)) {
   //   reply.code(403).send('Forbidden')
   //   return
@@ -67,7 +67,7 @@ function generateImage (viewCount) {
   ctx.fillRect(0, 0, 200, 50)
 
   ctx.fillStyle = '#000'
-  ctx.font = '30px Arial'
+  ctx.font = '12px Arial'
   ctx.fillText(`Views: ${viewCount}`, 10, 35)
 
   return canvas.toBuffer('image/png')
