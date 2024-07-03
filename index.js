@@ -4,9 +4,10 @@ const { createCanvas } = require('canvas')
 const User = require('./models/user.model.js')
 const View = require('./models/view.model.js')
 
-console.log('START')
+const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/tracker'
+const PORT = process.env.PORT || 3000
 
-mongoose.connect('mongodb://localhost:27017/tracker', {
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -71,7 +72,7 @@ function generateImage (viewCount) {
   return canvas.toBuffer('image/png')
 }
 
-fastify.listen(0, (err, address) => {
+fastify.listen(PORT, (err, address) => {
   if (err) {
     fastify.log.error(err)
     process.exit(1)
