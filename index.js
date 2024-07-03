@@ -29,10 +29,10 @@ fastify.get('/track/:githubUsername', async (request, reply) => {
   const { githubUsername } = request.params
   const referer = request.headers.referer || ''
 
-  if (!referer.startsWith(`https://github.com/${githubUsername}`)) {
-    reply.code(403).send('Forbidden')
-    return
-  }
+  // if (!referer.startsWith(`https://github.com/${githubUsername}`)) {
+  //   reply.code(403).send('Forbidden')
+  //   return
+  // }
 
   const ip = request.ip
 
