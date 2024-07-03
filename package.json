@@ -1,0 +1,18 @@
+{
+  "name": "tracking-pixel-be",
+  "version": "1.0.0",
+  "description": "This tracking pixel can be used to generate a image url which can be inserted into github profile readme and this will count number of unique visitors on your profile and provide you stats about it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "fastify": "^4.28.1",
+    "mongoose": "^8.4.4"
+  }
+}
