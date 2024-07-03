@@ -1,4 +1,4 @@
-const fastify = require('fastify')({ logger: true })
+const fastify = require('fastify')({ logger: true, trustProxy: true });
 const mongoose = require('mongoose')
 const { createCanvas } = require('canvas')
 const User = require('./models/user.model.js')
